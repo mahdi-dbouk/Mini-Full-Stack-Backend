@@ -9,5 +9,9 @@
     $email = $_POST['email'];
     $password = $_POST['password'];
 
+    //database query
+    $stmt_get_user = "select * from users where email = ?";
+    $get_user = $mysqli->prepare($stmt_get_user);
+
     
 ?>
